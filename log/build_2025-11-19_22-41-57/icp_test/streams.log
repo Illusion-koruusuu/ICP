@@ -1,0 +1,5 @@
+[0.007s] Invoking command in '/home/lu/code/ICP/build/icp_test': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/lu/code/ICP/build/icp_test -- -j16 -l16
+[0.070s] [ 50%] [32mBuilding CXX object CMakeFiles/icp_test.dir/icp.cpp.o[0m
+[7.945s] [100%] [32m[1mLinking CXX executable icp_test[0m
+[8.954s] [100%] Built target icp_test
+[8.976s] Invoked command in '/home/lu/code/ICP/build/icp_test' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/lu/code/ICP/build/icp_test -- -j16 -l16

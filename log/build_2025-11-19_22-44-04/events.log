@@ -1,0 +1,87 @@
+[0.000000] (-) TimerEvent: {}
+[0.000384] (icp_test) JobQueued: {'identifier': 'icp_test', 'dependencies': OrderedDict()}
+[0.000604] (icp_test) JobStarted: {'identifier': 'icp_test'}
+[0.006094] (icp_test) JobProgress: {'identifier': 'icp_test', 'progress': 'cmake'}
+[0.006831] (icp_test) JobProgress: {'identifier': 'icp_test', 'progress': 'build'}
+[0.007415] (icp_test) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/lu/code/ICP/build/icp_test', '--', '-j16', '-l16'], 'cwd': '/home/lu/code/ICP/build/icp_test', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'zh_CN:en', 'USER': 'lu', 'LC_TIME': 'zh_CN.UTF-8', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/lu', 'CHROME_DESKTOP': 'code.desktop', 'TERM_PROGRAM_VERSION': '1.106.1', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/code.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'zh_CN.UTF-8', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/code/code', 'MANAGERPID': '2429', 'SYSTEMD_EXEC_PID': '2703', 'IM_CONFIG_CHECK_ENV': '1', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '56086', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'lu', 'JOURNAL_STREAM': '9:22939', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'lu', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/home/lu/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/lu/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/lu-ThinkBook-14-G6-AHP:@/tmp/.ICE-unix/2663,unix/lu-ThinkBook-14-G6-AHP:/tmp/.ICE-unix/2663', 'INVOCATION_ID': '61e0930055db49b2a428d62669733666', 'PAPERSIZE': 'a4', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'zh_CN.UTF-8', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'LANG': 'zh_CN.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'LC_TELEPHONE': 'zh_CN.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.NMIZF3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-cb0ae27d9b.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SHELL': '/bin/bash', 'LC_NAME': 'zh_CN.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'zh_CN.UTF-8', 'GJS_DEBUG_OUTPUT': 'stderr', 'LC_IDENTIFICATION': 'zh_CN.UTF-8', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/lu/code/ICP/build/icp_test', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'LC_NUMERIC': 'zh_CN.UTF-8', 'LC_PAPER': 'zh_CN.UTF-8', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}), 'shell': False}
+[0.075560] (icp_test) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/icp_test.dir/icp.cpp.o\x1b[0m\n'}
+[0.099643] (-) TimerEvent: {}
+[0.199958] (-) TimerEvent: {}
+[0.300292] (-) TimerEvent: {}
+[0.400591] (-) TimerEvent: {}
+[0.500897] (-) TimerEvent: {}
+[0.601214] (-) TimerEvent: {}
+[0.701547] (-) TimerEvent: {}
+[0.801918] (-) TimerEvent: {}
+[0.902214] (-) TimerEvent: {}
+[1.002546] (-) TimerEvent: {}
+[1.102901] (-) TimerEvent: {}
+[1.203241] (-) TimerEvent: {}
+[1.303550] (-) TimerEvent: {}
+[1.403892] (-) TimerEvent: {}
+[1.504216] (-) TimerEvent: {}
+[1.604537] (-) TimerEvent: {}
+[1.704988] (-) TimerEvent: {}
+[1.805394] (-) TimerEvent: {}
+[1.905762] (-) TimerEvent: {}
+[2.006091] (-) TimerEvent: {}
+[2.106330] (-) TimerEvent: {}
+[2.206637] (-) TimerEvent: {}
+[2.306971] (-) TimerEvent: {}
+[2.407315] (-) TimerEvent: {}
+[2.507647] (-) TimerEvent: {}
+[2.607995] (-) TimerEvent: {}
+[2.708291] (-) TimerEvent: {}
+[2.808532] (-) TimerEvent: {}
+[2.908813] (-) TimerEvent: {}
+[3.009069] (-) TimerEvent: {}
+[3.109354] (-) TimerEvent: {}
+[3.209648] (-) TimerEvent: {}
+[3.309973] (-) TimerEvent: {}
+[3.410319] (-) TimerEvent: {}
+[3.510626] (-) TimerEvent: {}
+[3.610927] (-) TimerEvent: {}
+[3.711227] (-) TimerEvent: {}
+[3.811530] (-) TimerEvent: {}
+[3.911816] (-) TimerEvent: {}
+[4.012117] (-) TimerEvent: {}
+[4.112435] (-) TimerEvent: {}
+[4.213434] (-) TimerEvent: {}
+[4.315087] (-) TimerEvent: {}
+[4.416217] (-) TimerEvent: {}
+[4.517264] (-) TimerEvent: {}
+[4.618219] (-) TimerEvent: {}
+[4.719143] (-) TimerEvent: {}
+[4.820143] (-) TimerEvent: {}
+[4.920989] (-) TimerEvent: {}
+[5.022188] (-) TimerEvent: {}
+[5.124198] (-) TimerEvent: {}
+[5.225992] (-) TimerEvent: {}
+[5.327136] (-) TimerEvent: {}
+[5.429072] (-) TimerEvent: {}
+[5.529980] (-) TimerEvent: {}
+[5.630684] (-) TimerEvent: {}
+[5.731005] (-) TimerEvent: {}
+[5.831301] (-) TimerEvent: {}
+[5.931624] (-) TimerEvent: {}
+[5.995799] (icp_test) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable icp_test\x1b[0m\n'}
+[6.031738] (-) TimerEvent: {}
+[6.132086] (-) TimerEvent: {}
+[6.232562] (-) TimerEvent: {}
+[6.333585] (-) TimerEvent: {}
+[6.434584] (-) TimerEvent: {}
+[6.535531] (-) TimerEvent: {}
+[6.636547] (-) TimerEvent: {}
+[6.737723] (-) TimerEvent: {}
+[6.839504] (-) TimerEvent: {}
+[6.940959] (-) TimerEvent: {}
+[7.042115] (-) TimerEvent: {}
+[7.143262] (-) TimerEvent: {}
+[7.244972] (-) TimerEvent: {}
+[7.346064] (-) TimerEvent: {}
+[7.412746] (icp_test) StdoutLine: {'line': b'[100%] Built target icp_test\n'}
+[7.446609] (-) TimerEvent: {}
+[7.496669] (icp_test) CommandEnded: {'returncode': 0}
+[7.541823] (icp_test) JobEnded: {'identifier': 'icp_test', 'rc': 0}
+[7.546804] (-) TimerEvent: {}
+[7.547283] (-) EventReactorShutdown: {}
