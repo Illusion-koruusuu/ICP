@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
 
-project(icp_test)
+project(LidarToolkit)
 
 find_package(PCL 1.5 REQUIRED)
 set(CMAKE_CXX_STANDARD 17)

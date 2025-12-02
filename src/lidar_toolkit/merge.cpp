@@ -1,7 +1,7 @@
 /*
  * merge.cpp
  * 合并 ./merge 目录下的所有 PCD/PLY 点云为一个 PCD 文件,输出到./output 目录下.
- * 用法: ./build/icp_test/merge
+ * 用法: ./build/LidarToolkit/merge
  */
 
 #include <iostream>

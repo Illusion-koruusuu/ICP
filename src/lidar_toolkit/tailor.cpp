@@ -1,6 +1,6 @@
 /*
  * tailor.cpp
- * 用法: ./build/icp_test/tailor <input_path>
+ * 用法: ./build/LidarToolkit/tailor <input_path>
  * <input_path> 可以是单个 PCD 文件,也可以是包含多个 PCD 文件的目录.
  * 程序会处理所有输入 PCD 文件,去除 Z 轴小于 2.0 米的点,并将结果保存到 ./output 目录下.
  */
