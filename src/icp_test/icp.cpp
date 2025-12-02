@@ -1,6 +1,9 @@
 #include <iostream>
 #include <string>
 #include <algorithm>
+#include <sys/stat.h>
+#include <ctime>
+#include <iomanip>
 
 #include <pcl/io/ply_io.h>
 #include <pcl/io/pcd_io.h>
@@ -34,6 +37,56 @@ keyboardEventOccurred (const pcl::visualization::KeyboardEvent& event,
 {
   if (event.getKeySym () == "space" && event.keyDown ())
     next_iteration = true;
+}
+
+static bool ensureDirectoryExists(const std::string &dir)
+{
+  struct stat info;
+  if (stat(dir.c_str(), &info) != 0)
+  {
+    if (mkdir(dir.c_str(), 0755) != 0)
+    {
+      PCL_ERROR("Could not create directory %s\n", dir.c_str());
+      return false;
+    }
+  }
+  else if (!S_ISDIR(info.st_mode))
+  {
+    PCL_ERROR("%s exists but is not a directory\n", dir.c_str());
+    return false;
+  }
+  return true;
+}
+
+static std::string getFileBaseName(const std::string &path)
+{
+  size_t pos = path.find_last_of("/\\");
+  std::string fname = (pos == std::string::npos) ? path : path.substr(pos + 1);
+  size_t dot = fname.find_last_of('.');
+  if (dot == std::string::npos) return fname;
+  return fname.substr(0, dot);
+}
+
+static bool saveAlignedCloud(const PointCloudT::Ptr &cloud, const std::string &out_dir, const std::string &source_file, const std::string &target_file)
+{
+  if (!ensureDirectoryExists(out_dir)) return false;
+
+  std::time_t t = std::time(nullptr);
+  std::tm tm = *std::localtime(&t);
+  std::stringstream ss;
+  ss << out_dir;
+  if (!out_dir.empty() && out_dir.back() != '/') ss << '/';
+  ss << "registered_" << getFileBaseName(source_file) << "_to_" << getFileBaseName(target_file) << "_";
+  ss << std::put_time(&tm, "%Y%m%d_%H%M%S") << ".pcd";
+  std::string out_path = ss.str();
+
+  if (pcl::io::savePCDFileBinary(out_path, *cloud) < 0)
+  {
+    PCL_ERROR("Failed to save PCD file %s\n", out_path.c_str());
+    return false;
+  }
+  std::cout << "Saved aligned cloud to " << out_path << " (" << cloud->size() << " points)\n";
+  return true;
 }
 
 static bool
@@ -133,6 +186,8 @@ main (int argc,
     std::cout << "\nICP transformation " << iterations << " : cloud_icp -> cloud_ori" << std::endl;
     transformation_matrix = icp.getFinalTransformation ().cast<double>();
     print4x4Matrix (transformation_matrix);
+    // Save the aligned point cloud to ./output
+    saveAlignedCloud(cloud_icp, "./output", argv[2], argv[1]);
   }
   else
   {
@@ -213,6 +268,8 @@ main (int argc,
         std::string iterations_cnt = "ICP iterations = " + ss.str ();
         viewer.updateText (iterations_cnt, 10, 60, 16, txt_gray_lvl, txt_gray_lvl, txt_gray_lvl, "iterations_cnt");
         viewer.updatePointCloud (cloud_icp, cloud_icp_color_h, "cloud_icp_v2");
+        // Save the aligned point cloud after this iteration
+        saveAlignedCloud(cloud_icp, "./output", argv[2], argv[1]);
       }
       else
       {
