@@ -1,4 +1,0 @@
-Invoking command in '/home/lu/code/ICP/build/icp_test': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/lu/code/ICP/src/icp_test -DCMAKE_INSTALL_PREFIX=/home/lu/code/ICP/install/icp_test
-Invoked command in '/home/lu/code/ICP/build/icp_test' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/lu/code/ICP/src/icp_test -DCMAKE_INSTALL_PREFIX=/home/lu/code/ICP/install/icp_test
-Invoking command in '/home/lu/code/ICP/build/icp_test': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/lu/code/ICP/build/icp_test -- -j16 -l16
-Invoked command in '/home/lu/code/ICP/build/icp_test' returned '2': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/lu/code/ICP/build/icp_test -- -j16 -l16
